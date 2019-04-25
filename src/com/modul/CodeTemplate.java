@@ -4,21 +4,18 @@ import java.util.Scanner;
 
 public class CodeTemplate {
     public static String kalimat, cari;
-    Scanner a = new Scanner(System.in);
 
     public static void main(String[] args) {
         Scanner a = new Scanner(System.in);
         inputan1(a);
         inputan2(a);
-        CodeTemplate in = new CodeTemplate();
         int i = 0;
-        while (i<kalimat.length()){
-            String apa = kalimat.substring(i, i++);
-            if (apa.equals(cari)){
+        while(i<kalimat.length()){
+            String apa = kalimat.substring(i, i+1);
+            if(apa.contains(cari)){
                 System.out.println("Ada di index ke : " + i + " ");
             }
             i++;
-
         }
     }
 
@@ -29,6 +26,6 @@ public class CodeTemplate {
 
     public static void inputan1(Scanner a) {
         System.out.println("Input kalimat : ");
-        kalimat = a.next();
+        kalimat = a.nextLine();
     }
 }
